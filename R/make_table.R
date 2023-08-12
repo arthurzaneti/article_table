@@ -261,9 +261,9 @@ print_as_kable <- function(eval, latex = F){
 
 
 make_table <- function(n, theta){
-  estimacoes <- t(eval_estim(n, 5, theta))
+  estimacoes <- t(eval_estim(n, 5000, theta))
   ci <- ci(n, theta, 0.05)
-  taxa_de_cobertura <- c(eval_ci(n, 5, theta, 0.05))
+  taxa_de_cobertura <- c(eval_ci(n, 5000, theta, 0.05))
 
   cenario <- cbind(estimacoes, ci, taxa_de_cobertura)
 
